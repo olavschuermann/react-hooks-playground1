@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function AskForm() {
 
-    const [firstInput, setFirstInput] = useState();
+    const [firstInput, setFirstInput] = useState('');
 
     return (
         <div>
