@@ -4,14 +4,20 @@ function AskForm(dataFirstField) {
 
     const [firstInput, setFirstInput] = useState('');
 
-    dataFirstField = firstInput;
+    const dataField = e => {
+        e.preventDefault();
+        setFirstInput(e.target.value);
+        dataFirstField = firstInput;
+        return dataFirstField;
+    }
+
 
     return (
         <div>
             <form>
                 {/* // Inhalt aus erstem Feld abfragen und in useState speichern, Ausgabe in console.log */}
                 <input type="text" name="First question to ask" value={firstInput} 
-                onChange={e => setFirstInput(e.target.value)} /><br />
+                onChange={e => dataField(e)} /><br />
                 {console.log(firstInput)}
                 <input type="number" name="How old are you?" /><br />
                 <input type="text" name="Third question to ask" /><br />
