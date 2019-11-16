@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
-function AskForm() {
+function AskForm(dataFirstField) {
 
     const [firstInput, setFirstInput] = useState('');
+
+    dataFirstField = firstInput;
 
     return (
         <div>

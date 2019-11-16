@@ -3,14 +3,17 @@ import './App.css';
 import AskForm from './components/AskForm';
 
 function App() {
+
+  const dataFirstField = '';
+
   return (
     <div className="App">
       <h1>Some header text</h1>
       <br /><br />
       Ausgabe:<br />
-      <input type="text" placeholder="" />
+      <input type="text" placeholder="" value={dataFirstField} />
       <br /><br /><br />
-      <AskForm />
+      <AskForm dataFirstField={dataFirstField} />
     </div>
   );
 }
