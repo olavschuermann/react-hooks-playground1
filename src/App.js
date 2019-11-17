@@ -19,13 +19,11 @@ function App() {
       <h1>Some header text</h1>
       <br /><br />
       Ausgabe:<br />
-      <input type="text" placeholder="Nix drin" value={dataFirstField} />
+      <input type="text" placeholder="Nix drin" value={dataFirstField} readOnly />
       <br /><br /><br />
       <AskForm getDataFirstField={getDataFirstField} />
     </div>
   );
 }
-
-// Text aus Child Component > Input Field holen und in Ausgabe-Feld anzeigen
 
 export default App;
