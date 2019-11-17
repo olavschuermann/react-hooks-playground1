@@ -11,6 +11,7 @@ function AskForm( { getDataFirstField } ) {
     const dataField = (e) => {
         setFirstInput(e);
         console.log('Inhalt von firstInput: ' + firstInput);
+        getDataFirstField(firstInput);
     }
 
     return (

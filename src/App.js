@@ -4,11 +4,14 @@ import AskForm from './components/AskForm';
 
 function App() {
 
-  const getDataFirstField = e => {
+  let dataFirstField = '';
+
+  const getDataFirstField = (data) => {
     // e.preventDefault();
-    // setFirstInput(e.target.value);
-    // dataFirstField = firstInput;
-    // return dataFirstField;
+    console.log('Daten in Parent (data): ' + data);
+    // Übergabe von Input aus Child nach Parent funktioniert
+    // nun: wie bekomme ich das in das Ausgabefeld?
+    dataFirstField = data;
 }
 
   return (
@@ -16,7 +19,7 @@ function App() {
       <h1>Some header text</h1>
       <br /><br />
       Ausgabe:<br />
-      <input type="text" placeholder="" value={getDataFirstField} />
+      <input type="text" placeholder="" value={dataFirstField} />
       <br /><br /><br />
       <AskForm getDataFirstField={getDataFirstField} />
     </div>
