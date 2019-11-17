@@ -5,10 +5,9 @@ function AskForm( { getDataFirstField } ) {
     const [firstInput, setFirstInput] = useState('');
 
 
-    // Daten zurückschicken an Parent component?
-    // Passing props up > https://www.udemy.com/course/modern-react-front-to-back/learn/lecture/14969828#overview
-
     const dataField = (e) => {
+        // letzter Buchstabe wird im Ausgabe-Feld nicht angezeigt...
+        console.log('e gleich: ' + e); // bis hier wird auch der letzte Buchstabe angezeigt
         setFirstInput(e);
         console.log('Inhalt von firstInput: ' + firstInput);
         getDataFirstField(firstInput);
@@ -17,7 +16,6 @@ function AskForm( { getDataFirstField } ) {
     return (
         <div>
             <form>
-                {/* // Inhalt aus erstem Feld abfragen und in useState speichern, Ausgabe in console.log */}
                 <input type="text" name="First question to ask" value={firstInput} 
                 onChange={e => dataField(e.target.value)} /><br />
                 <input type="number" name="How old are you?" /><br />

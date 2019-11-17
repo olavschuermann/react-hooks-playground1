@@ -9,8 +9,6 @@ function App() {
   const getDataFirstField = (data) => {
     // e.preventDefault();
     console.log('Daten in Parent (data): ' + data);
-    // Übergabe von Input aus Child nach Parent funktioniert
-    // nun: wie bekomme ich das in das Ausgabefeld? Hook nutzen!
     setDataFirstField(data);
 }
 
