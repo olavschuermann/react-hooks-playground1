@@ -8,7 +8,10 @@ function AskForm( { getDataFirstField } ) {
     const dataField = (e) => {
         // letzter Buchstabe wird im Ausgabe-Feld nicht angezeigt...
         console.log('e gleich: ' + e); // bis hier wird auch der letzte Buchstabe angezeigt
-        setFirstInput(e);
+        // useState ist asynchronous! Daher Eingabe erst in Variable schieben.
+        let dataTemp = e;
+        console.log('dataTemp: ' + dataTemp);
+        setFirstInput(dataTemp);
         console.log('Inhalt von firstInput: ' + firstInput);
         getDataFirstField(firstInput);
     }
