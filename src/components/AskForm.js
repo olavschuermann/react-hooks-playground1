@@ -21,7 +21,7 @@ function AskForm( { getDataFirstField } ) {
             <form>
                 <input type="text" name="First question to ask" value={firstInput} 
                     onChange={e => dataField(e.target.value)} /> <br />
-                    // onChange={e => setFirstInput(e.target.value)} /><br />
+                    {/* // onChange={e => setFirstInput(e.target.value)} /><br /> */}
                 <input type="number" name="How old are you?" /><br />
                 <input type="text" name="Third question to ask" /><br />
                 <input type="submit" value="Absenden" />
