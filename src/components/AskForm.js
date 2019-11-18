@@ -8,7 +8,7 @@ function AskForm( { getDataFirstField } ) {
     const dataField = (e) => {
         // letzter Buchstabe wird im Ausgabe-Feld nicht angezeigt...
         console.log('e gleich: ' + e); // bis hier wird auch der letzte Buchstabe angezeigt
-        // useState ist asynchronous! Daher Eingabe erst in Variable schieben.
+        // useState ist asynchronous! Daher Eingabe erst in Variable schieben. Klappt trotzdem nicht...
         let dataTemp = e;
         console.log('dataTemp: ' + dataTemp);
         setFirstInput(dataTemp);
@@ -20,7 +20,8 @@ function AskForm( { getDataFirstField } ) {
         <div>
             <form>
                 <input type="text" name="First question to ask" value={firstInput} 
-                onChange={e => dataField(e.target.value)} /><br />
+                    onChange={e => dataField(e.target.value)} /><br />
+                    // onChange={e => setFirstInput(e.target.value)} /><br />
                 <input type="number" name="How old are you?" /><br />
                 <input type="text" name="Third question to ask" /><br />
                 <input type="submit" value="Absenden" />
