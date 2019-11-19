@@ -16,9 +16,14 @@ function AskForm( { getDataFirstField } ) {
         getDataFirstField(firstInput);
     }
 
+    const dataSubmit = (e) => {
+        e.preventDefault();
+        console.log("Submit!");
+    }
+
     return (
         <div>
-            <form>
+            <form onSubmit={dataSubmit}>
                 <input type="text" name="First question to ask" value={firstInput} 
                     onChange={e => dataField(e.target.value)} /> <br />
                     {/* // onChange={e => setFirstInput(e.target.value)} /><br /> */}
