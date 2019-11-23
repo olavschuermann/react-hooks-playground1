@@ -19,6 +19,7 @@ function AskForm( { getDataFirstField } ) {
     const dataSubmit = (e) => {
         e.preventDefault();
         console.log("Submit!");
+        console.log('e aus submit: ' + e.target.value);
     }
 
     // next: TO-DO
